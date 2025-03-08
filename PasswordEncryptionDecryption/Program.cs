@@ -1,7 +1,5 @@
-﻿using System;
-using System.IO;
+﻿
 using System.Security.Cryptography;
-using System.Text;
 
 class SimpleTextEncryptor
 {
@@ -9,7 +7,7 @@ class SimpleTextEncryptor
     {
         while (true)
         {
-            Console.WriteLine("输入'jm'进入加密模式，输入'ja'进入解密模式，输入'exit'退出程序。");
+            Console.WriteLine("输入'enc'进入加密模式，输入'dec'进入解密模式，输入'exit'退出程序。");
             string mode = Console.ReadLine().Trim().ToLower();
 
             if (mode == "exit")
@@ -19,10 +17,10 @@ class SimpleTextEncryptor
 
             switch (mode)
             {
-                case "jm":
+                case "enc":
                     EncryptMode();
                     break;
-                case "ja":
+                case "dec":
                     DecryptMode();
                     break;
                 default:
